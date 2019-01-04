@@ -9,18 +9,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('EasyList'),
-        ),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              Image.asset('assets/image.jpeg'),
-              Text('Angel')
-            ],
+          appBar: AppBar(
+            title: Text('EasyList'),
           ),
-        ),
-      ),
+          body: Column(
+            children: [
+              Container(
+                margin:EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Text('Add Picture'),
+                ),
+              ),
+              Card(
+                child: Column(
+                  children: <Widget>[
+                    Image.asset('assets/image.jpeg'),
+                    Text('Angel')
+                  ],
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
